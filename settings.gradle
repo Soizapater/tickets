@@ -1,0 +1,4 @@
+rootProject.name = 'Tickets-api'
+
+includeFlat 'Tickets'
+project(':Tickets').projectDir = new File('../Tickets')

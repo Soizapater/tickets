@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm 
+                                     http://java.sun.com/xml/ns/persistence/orm_1_0.xsd"
+                 version="1.0">
+
+    <mapped-superclass class="es.mde.Tickets.comun.ReservaImpl" access="FIELD">
+        <attributes>
+			<many-to-one name="butaca" target-entity="es.mde.entidades.ButacaConId">
+                <join-column name="id_butaca" />
+            </many-to-one>
+
+            <many-to-one name="sesion" target-entity="es.mde.entidades.SesionConId">
+                <join-column name="id_sesion" />
+            </many-to-one>
+        </attributes>
+    </mapped-superclass>
+</entity-mappings>
